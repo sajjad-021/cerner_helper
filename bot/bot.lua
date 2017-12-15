@@ -1,10 +1,11 @@
 #start Project Anti Spam V4:)
-json = dofile('./libs/JSON.lua')
-serpent = dofile("./libs/serpent.lua")
+json = require('cjson')
+serpent = require("serpent")
 lgi = require ('lgi')
 notify = lgi.require('Notify')
 notify.init ("Telegram updates")
-redis =  dofile("./libs/redis.lua")
+redis =  require("redis")
+redis = redis.connect("127.0.0.1", 6379)
 minute = 60
 hour = 3600
 day = 86400
